@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { FiShoppingCart, FiShoppingBag } from "react-icons/fi";
 import Butter from 'buttercms';
+import Footer from '../Footer';
 
 const butter = Butter(process.env.REACT_APP_BUTTER_ECOMMERCE);
 
@@ -43,7 +44,7 @@ function Products() {
           fontFamily="Robo"
           my="5px"
         >
-          Products
+          Our Products
         </Text>
         <Button
           my="5px"
@@ -58,7 +59,7 @@ function Products() {
           View Cart
         </Button>
       </Flex>
-      <Divider />
+      
       <Box mt={4}>
         <SimpleGrid
           minChildWidth="300px"
@@ -69,20 +70,14 @@ function Products() {
         >
           {products.map((product) => (
             <Box
-              bg="white"
               maxW="sm"
-              borderWidth="1px"
               rounded="lg"
-              shadow="lg"
               _hover={{ shadow: "dark-lg" }}
               key={product.id}
             >
-              <Image
-                h="350px"
-                fit="cover"
+              <Image className= "product-image"
                 src={product.image}
                 alt={`Picture of ${product.name}`}
-                roundedTop="lg"
               />
 
               <Box p="6">
@@ -92,20 +87,11 @@ function Products() {
                   alignContent="center"
                 >
                   <Text
-                    fontSize="2xl"
-                    fontWeight="semibold"
-                    as="h4"
-                    textTransform="uppercase"
-                    lineHeight="tight"
-                    fontFamily="Roboto"
+                  className="product-name"
                   >
                     {product.name}
                   </Text>
                   <Text
-                    as="h4"
-                    fontSize="2xl"
-                    fontWeight="bold"
-                    color="teal.600"
                   >
                     ${product.price}
                   </Text>
@@ -124,7 +110,7 @@ function Products() {
                   size="lg"
                   mt={4}
                   isFullWidth
-                  colorScheme="blue"
+                  colorScheme="green"
                   variant="outline"
                   alignSelf={"center"}
 
@@ -143,6 +129,9 @@ function Products() {
           ))}
         </SimpleGrid>
       </Box>
+
+      <Footer/>
+      
     </Container>
 
   );
