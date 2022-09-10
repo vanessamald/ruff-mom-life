@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
+import Butter from 'buttercms';
+
+const butter = Butter(process.env.REACT_APP_BUTTER_ECOMMERCE);
 
 function App() {
+  
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await butter.content.retrieve(["ruff-mom-life"], {
+        order: "name",
+      });
+      const { data } = await res.data;
+      const allProducts = data['ruff-mom-life'];
+      console.log(allProducts);
+      setProducts(allProducts);
+    }
+    fetchData();
+  }, []);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+  <div>
+    {products.map((product) => (
+      <div>
+        <img src={product.image} alt={`${product.name}`} />
+        {product.name}
+        {product.price}
+        {product.description}
+      </div>
+    ))}
+  </div>
   );
 }
 
