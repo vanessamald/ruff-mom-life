@@ -41,8 +41,11 @@ function Products() {
           href="/"
           fontSize="2rem"
           color="gray.900"
-          fontFamily="Robo"
           my="5px"
+          style={{
+            fontFamily: "Creamer",
+            color: "white",
+          }}
         >
           Our Products
         </Text>
@@ -131,7 +134,7 @@ function Products() {
       </Box>
 
       <Footer/>
-      
+
     </Container>
 
   );
