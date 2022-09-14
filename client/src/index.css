@@ -50,6 +50,24 @@ code {
   }
 }
 
+@keyframes slideUp {
+  0% {
+    margin-top: 100%;
+    
+    background-color: #715a45;
+  }
+  50% {
+    margin-top: 0%;
+    
+    background-color: #715a45;
+  }
+  100% {
+    margin-top: 0%;
+   
+    background-color: #d0d9b3;
+  }
+}
+
 @keyframes popIn {
   0% {
     transform: scale(0);
@@ -120,8 +138,7 @@ code {
 }
 
 .product-name {
-  font-family: Creamer;
-  font-weight: bold;
+  
   font-size: 2rem;
   text-align: center;
   margin-top: -200px;
@@ -138,3 +155,16 @@ code {
   border: none;
 }
 /* Product Card Styling Ends */
+
+/* Customize Snipcart */
+.snipcart-cart-header__icon {
+  color: black;
+}
+
+.snipcart-modal__close-icon {
+  color: black;
+}
+
+.snipcart-button-primary {
+  background-color: black;
+}

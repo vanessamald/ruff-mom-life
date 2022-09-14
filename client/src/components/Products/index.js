@@ -16,7 +16,6 @@ import Footer from '../Footer';
 const butter = Butter(process.env.REACT_APP_BUTTER_ECOMMERCE);
 
 function Products() {
-  
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -34,7 +33,8 @@ function Products() {
   
   return (
     
-<Container maxW="container.xl" h="100vh" >
+<Container maxW="container.xl" h="100vh"
+>
       <Flex justifyContent="space-between" alignContent="center">
         <Text
           as="a"
@@ -45,21 +45,23 @@ function Products() {
           style={{
             fontFamily: "Creamer",
             color: "white",
+            
           }}
         >
           Our Products
         </Text>
         <Button
           my="5px"
-          colorScheme="green"
+          colorScheme="black"
           variant="ghost"
           leftIcon={<FiShoppingBag size="24px" />}
           size="lg"
           p={2}
 
           className="snipcart-checkout"
+          
         >
-          View Cart
+          
         </Button>
       </Flex>
       
@@ -89,11 +91,12 @@ function Products() {
                   justifyContent="space-between"
                   alignContent="center"
                 >
-                  <Text
+                  <p
                   className="product-name"
+                  
                   >
                     {product.name}
-                  </Text>
+                  </p>
                   <Text
                   >
                     ${product.price}
@@ -113,7 +116,7 @@ function Products() {
                   size="lg"
                   mt={4}
                   isFullWidth
-                  colorScheme="green"
+                  colorScheme="black"
                   variant="outline"
                   alignSelf={"center"}
 
@@ -124,6 +127,10 @@ function Products() {
                   data-item-url="/"
                   data-item-description={product.description}
                   data-item-price={product.price}
+
+                  style={{
+                    width:"100%"
+                  }}
                 >
                   Add to Cart
                 </Button>

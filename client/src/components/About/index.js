@@ -1,6 +1,7 @@
 import React from 'react';
 import aboutImage from '../../assets/images/about.webp';
 import aboutImage2 from '../../assets/images/about2.jpg';
+import { useState, useEffect } from 'react';
 
 function About() {
     return (
@@ -29,7 +30,7 @@ function About() {
                 marginLeft: '350px',
                 marginTop: '50px',
                 overflow: 'hidden',
-                zIndex: '1',
+                zIndex: '1',  
             }}
             >About</h3>
             <img src={aboutImage} alt="about"

@@ -58,7 +58,7 @@ function Header() {
         
         marginBottom: '300px',
       }}
-      >It's "ruff sometimes but we love it!</p>
+      ></p>
       </div>
     
     </div> 
