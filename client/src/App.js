@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import About from './components/About';
+import Subscribe from './components/Subscribe';
 
 function App() {
   // set a timeout for loading screen
@@ -63,8 +64,10 @@ function App() {
     
     }}>
       <Navigation />
+      
       <Header/>
       <About/>
+      <Subscribe />
       <div>
         <Products />
       </div>

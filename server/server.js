@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const Mailchimp = require('mailchimp-api-v3');
 require('dotenv').config({ path: __dirname +  "/.env" });
 
@@ -8,7 +9,7 @@ const list_id = process.env.MAILCHIMP_LIST_ID;
 
 const mailchimp = new Mailchimp(process.env.MAILCHIMP_API_KEY);
 
-app.get('/api/memberAdd', (req, res) => {
+app.get('/api/subscribe', (req, res) => {
     mailchimp
         .post(`/lists/${list_id}/members`, {
             email_address: req.query.email,

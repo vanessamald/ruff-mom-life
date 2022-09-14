@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/vanessamald/ruff-mom-life/issues"
   },
-  "homepage": "https://github.com/vanessamald/ruff-mom-life#readme"
+  "homepage": "https://github.com/vanessamald/ruff-mom-life#readme",
+  "dependencies": {
+    "concurrently": "^7.4.0"
+  }
 }
