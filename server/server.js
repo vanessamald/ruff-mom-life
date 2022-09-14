@@ -1,16 +1,16 @@
 const express = require('express');
 const app = express();
 const Mailchimp = require('mailchimp-api-v3');
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config({ path: __dirname +  "/.env" });
 
 const mc_api_key = new Mailchimp(process.env.MAILCHIMP_API_KEY);
-const listId = process.env.MAILCHIMP_LIST_ID;
+const list_id = process.env.MAILCHIMP_LIST_ID;
 
 const mailchimp = new Mailchimp(process.env.MAILCHIMP_API_KEY);
 
-app.get('/subscribe', (req, res) => {
+app.get('/api/memberAdd', (req, res) => {
     mailchimp
-        .post(`/lists/${listId}/members`, {
+        .post(`/lists/${list_id}/members`, {
             email_address: req.query.email,
             status: 'subscribed',
         })
@@ -27,7 +27,7 @@ app.get('*', (req, res) => {
 });
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3001;
 app.listen(port);
 
 console.log(`Express is listening on port ${port}`);
