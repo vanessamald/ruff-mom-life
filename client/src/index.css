@@ -6,7 +6,11 @@
 
 * {
   background-color: #d0d9b3;
-  
+  background-image: url("../src/assets/images/hero-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
 }
 
 body {
@@ -167,4 +171,11 @@ code {
 
 .snipcart-button-primary {
   background-color: black;
+}
+
+/* Navigation Bar Styling */
+.navbar-item {
+  font-family: Creamer;
+  font-size: 1.5rem;
+  color: black;
 }

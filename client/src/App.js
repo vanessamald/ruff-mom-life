@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Switch, Router, Routes, Route, Link} from 'react-router-dom';
 import './index.css';
 import Marquee from "react-fast-marquee";
 import Products from './components/Products';
-import Header from './components/Header';
+import Home from './components/Home';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import About from './components/About';
@@ -63,14 +64,19 @@ function App() {
       animationDuration: "5s",
     
     }}>
-      <Navigation />
-      
-      <Header/>
-      <About/>
-      <Subscribe />
-      <div>
-        <Products />
+    <BrowserRouter>
+    <Navigation/>
+      <div className="container mt-2" style={{ marginTop: 40 }}>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/products" element={<Products/>}/>
+          <Route path="/subscribe" element={<Subscribe/>}/>
+        </Routes>
       </div>
+    </BrowserRouter>
+
+      
       
     </div>
       )}

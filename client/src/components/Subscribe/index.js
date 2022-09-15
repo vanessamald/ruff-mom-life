@@ -1,7 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { renderMatches } from 'react-router-dom';
-
 
 class Subscribe extends React.Component {
         
@@ -37,11 +35,26 @@ class Subscribe extends React.Component {
         //const [email, setEmail] = useState('');
         const { placeholder, buttonText } = this.props;
         return (
-        <div className="subscribe">
-        <h2>Subscribe</h2>
+        <div className="subscribe"
+        style={{
+            //fontFamily: 'Creamer',
+            fontSize: '24px',
+            textAlign: 'center',
+            color: 'white',
+        }}
+        >
         <p>Subscribe to our newsletter</p>
         <form>
-            <input type="email" placeholder={placeholder} value={this.state.email} onChange={this.handleChange} />
+            <input type="email" placeholder={placeholder} value={this.state.email} onChange={this.handleChange} 
+            style={{
+                width: '100%',
+                borderRadius: '5px',
+                border: '1px solid white',
+                padding: '10px',
+                marginBottom: '10px',
+                color: 'white',
+            }}
+            />
             <button type="submit" onSubmit={this.handleSubmit}>Subscribe</button>
         </form>
         </div>
