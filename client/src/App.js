@@ -41,7 +41,7 @@ function App() {
         >
           <h1
           style={{
-            paddingTop: '300px',
+            
             fontFamily: 'Creamer',
             fontSize: "72px",
             textAlign: "center",
@@ -53,7 +53,7 @@ function App() {
             
             position: "absolute",
             //height: `${offset > 0 ? "10%" : "100%"}`,
-          }}>life is a little "ruff" sometimes</h1>
+          }}>lAlways made with love for all moms, dads, littles and fur babies.</h1>
         </div>
         
 

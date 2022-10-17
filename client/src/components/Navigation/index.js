@@ -5,29 +5,26 @@ import About from '../About';
 
 
 const Navigation = () => {
-    const [isOpen, setOpen] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
+    
+    //const handleClose = () => setShowMenu(false);
+    //const handleShow = () => setShowMenu(true);
+    
+    //const state = { showing: true };
+    //const { showing } = this.state;
+
     return (
       <nav
-        className="navbar is-primary"
-        role="navigation"
-        aria-label="main navigation"
+        
       >
         <div className="container">
           <div className="navbar-brand">
-            <a
-            
-              onClick={() => setOpen(!isOpen)}
-            >
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
+          <button onClick={() => setShowMenu}>toggle</button>
+         
           </div>
   
-          <div
-   
-          >
-            <div className="navbar-start"
+          <div>
+            <div className="navbar-menu"
                    style= {{
                     display: 'flex',
                     justifyContent: 'space-around',
@@ -40,14 +37,15 @@ const Navigation = () => {
                     height: '100%',
                     width: '100%', 
                   }}
+               
             >
-              <Link className="navbar-item" activeClassName="is-active" to="/">
+              <Link className="navbar-item" to="/">
                 Home
               </Link>
   
               <Link
                 className="navbar-item"
-                activeClassName="is-active"
+                
                 to="/about"
               >
                 About
@@ -55,7 +53,6 @@ const Navigation = () => {
   
               <Link
                 className="navbar-item"
-                activeClassName="is-active"
                 to="/products"
               >
                 Products

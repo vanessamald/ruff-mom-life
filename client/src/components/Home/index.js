@@ -5,12 +5,13 @@ import heroImage from '../../assets/images/hero-image.jpg';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
 import Subscribe from '../Subscribe';
+import Products from '../Products';
 
 function Home() {
   return (
     <div
         style= {{
-            marginBottom: '100px',
+            //marginBottom: '100px',
         }}>
       <h1 className="header"
         style= {{
@@ -62,6 +63,7 @@ function Home() {
       }}
       ></p>
       </div>
+    <Products/>
     <Subscribe/>
     <Footer/>
     </div> 
