@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Router, Routes, Route, Link} from 'react-router-dom';
 import './index.css';
 import Marquee from "react-fast-marquee";
@@ -8,6 +9,7 @@ import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import About from './components/About';
 import Subscribe from './components/Subscribe';
+import OffcanvasExample from './components/Navigation';
 
 function App() {
   // set a timeout for loading screen
@@ -35,17 +37,17 @@ function App() {
           {!done ? (
         <div
           style={{
-            backgroundColor: '#715a45',
+            backgroundColor: '#ffa29b',
             
           }}
         >
           <h1
           style={{
             
-            fontFamily: 'Creamer',
-            fontSize: "72px",
+            
+            fontSize: "1rem",
             textAlign: "center",
-            color: "#715a45",
+            color: "white",
             animationName: "slideUp",
             animationDuration: "5s",
             height: "100vh",
@@ -53,7 +55,7 @@ function App() {
             
             position: "absolute",
             //height: `${offset > 0 ? "10%" : "100%"}`,
-          }}>lAlways made with love for all moms, dads, littles and fur babies.</h1>
+          }}>Always made with love for all moms, dads, littles and fur babies.</h1>
         </div>
         
 
@@ -75,9 +77,6 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
-
-      
-      
     </div>
       )}
     </>

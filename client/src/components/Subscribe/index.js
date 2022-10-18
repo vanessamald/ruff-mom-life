@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
 
 class Subscribe extends React.Component {
         
@@ -39,7 +40,7 @@ class Subscribe extends React.Component {
         style={{
             //fontFamily: 'Creamer',
             fontSize: '24px',
-            textAlign: 'center',
+            textAlign: 'left',
             color: 'white',
         }}
         >
@@ -55,7 +56,12 @@ class Subscribe extends React.Component {
                 color: 'white',
             }}
             />
-            <button type="submit" onSubmit={this.handleSubmit}>Subscribe</button>
+            <Button 
+            style={{
+                width: '100%'
+            }}
+            variant="outline-dark" type="submit" onSubmit={this.handleSubmit}>Subscribe</Button>
+            
         </form>
         </div>
     )}

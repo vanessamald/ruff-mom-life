@@ -15,6 +15,12 @@
 }
 */
 
+*{
+  background-color: #9bb7ff;
+  font-family: "Josefin Sans", serif;
+  font-weight: 800;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -59,18 +65,18 @@ code {
 @keyframes slideUp {
   0% {
     margin-top: 100%;
-    
-    background-color: #715a45;
+    width: 100%;
+    background-color: #ffa29b;
   }
   50% {
     margin-top: 0%;
-    
-    background-color: #715a45;
+    width: 100%;
+    background-color: #ffa29b;
   }
   100% {
     margin-top: 0%;
-   
-    background-color: #d0d9b3;
+    width: 100%;
+    background-color: #ffa29b;
   }
 }
 
@@ -177,7 +183,9 @@ code {
 
 /* Navigation Bar Styling */
 .navbar-item {
-  font-family: Creamer;
-  font-size: 1.5rem;
-  color: black;
+  font-family: "Josefin Sans", serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffa29b;
+  text-transform: uppercase;
 }

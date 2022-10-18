@@ -56,7 +56,7 @@ function About() {
             padding: '30px',
             fontSize: '20px',
             textAlign: 'right',
-            color: '#715a45',
+            color: 'black',
             position: 'relative',
             background: 'transparent',
             marginTop: '150px',
@@ -71,11 +71,12 @@ function About() {
 
         <button
         style={{
-            fontSize: '20px',
+            fontSize: '1rem',
+            textTransform: 'uppercase',
             textAlign: 'center',
             color: 'white',
             position: 'relative',
-            backgroundColor: 'rgb(113, 90, 69)',
+            backgroundColor: '#ffa29b',
             border: '1px solid black',
             borderRadius: '20px',
             padding: '10px',

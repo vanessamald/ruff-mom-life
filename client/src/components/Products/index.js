@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+/* import { useState, useEffect } from 'react';
 import {
   Container,
   Text,
@@ -148,3 +148,4 @@ function Products() {
 }
 
 export default Products;
+*/
