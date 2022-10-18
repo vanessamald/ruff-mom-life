@@ -7,6 +7,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { FiShoppingCart, FiShoppingBag } from "react-icons/fi";
 
 function Navigation() {
   return (
@@ -39,8 +40,16 @@ function Navigation() {
                       Shirts
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
+                    <NavDropdown.Item href=""
+                      my="5px"
+                      colorScheme="black"
+                      variant="ghost"
+                      leftIcon={<FiShoppingBag size="24px" />}
+                      size="lg"
+                      p={2}
+                      className="snipcart-checkout"
+                      >  
+                      My Cart
                     </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>

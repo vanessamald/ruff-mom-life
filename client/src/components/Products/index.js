@@ -1,17 +1,11 @@
-/* import { useState, useEffect } from 'react';
-import {
-  Container,
-  Text,
-  Box,
-  Divider,
-  Image,
-  Button,
-  Flex,
-  SimpleGrid
-} from "@chakra-ui/react";
+import { useState, useEffect } from 'react';
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import { FiShoppingCart, FiShoppingBag } from "react-icons/fi";
 import Butter from 'buttercms';
-import Footer from '../Footer';
 
 const butter = Butter(process.env.REACT_APP_BUTTER_ECOMMERCE);
 
@@ -32,86 +26,66 @@ function Products() {
   }, []);
   
   return (
-    
-<Container maxW="container.xl" h="100vh"
->
-      <Flex justifyContent="space-between" alignContent="center">
-        <Text
-          as="a"
-          href="/"
-          fontSize="2rem"
-          color="gray.900"
-          my="5px"
-          style={{
-            fontFamily: "Creamer",
-            color: "white",
-            
-          }}
-        >
-          Our Products
-        </Text>
-        <Button
+    <Row xs={1} md={2} className="g-2">
+       <button
           my="5px"
           colorScheme="black"
           variant="ghost"
           leftIcon={<FiShoppingBag size="24px" />}
           size="lg"
           p={2}
-
           className="snipcart-checkout"
-          
-        >
-          
-        </Button>
-      </Flex>
-      
-      <Box mt={4}>
-        <SimpleGrid
-          minChildWidth="300px"
+        >  
+        </button>
+          {products.map((product) => (
+      <Col>
+    
+    <CardGroup maxW="container.xl" h="100vh">
+      <Card justifyContent="space-between" alignContent="center">
+      <div mt={4}>
+        <div
+          minChildWidth="100px"
           align="center"
           justify="center"
           spacing="40px"
           mb={32}
         >
-          {products.map((product) => (
-            <Box
+            <div
               maxW="sm"
               rounded="lg"
               _hover={{ shadow: "dark-lg" }}
               key={product.id}
             >
-              <Image className= "product-image"
+              <Card.Img className= "product-image" variant="top"
                 src={product.image}
                 alt={`Picture of ${product.name}`}
+                style={{
+                  
+                }}
               />
 
-              <Box p="6">
-                <Flex
+              <div p="6">
+                <div
                   mt="1"
                   justifyContent="space-between"
                   alignContent="center"
                 >
-                  <p
-                  className="product-name"
-                  
-                  >
+                  <p className="product-name">
                     {product.name}
                   </p>
-                  <Text
-                  >
+                  <p>
                     ${product.price}
-                  </Text>
-                </Flex>
+                  </p>
+                </div>
 
-                <Text
+                <Card.Text
                   mt={2}
                   color="gray.500"
                   display={{ base: "none", md: "flex" }}
-                >
-                  {product.description}
-                </Text>
+                >{product.description}
+                </Card.Text>
 
-                <Button
+                <button bg="black"
                   leftIcon={<FiShoppingCart size="24px" />}
                   size="lg"
                   mt={4}
@@ -133,19 +107,20 @@ function Products() {
                   }}
                 >
                   Add to Cart
-                </Button>
-              </Box>
-            </Box>
-          ))}
-        </SimpleGrid>
-      </Box>
-
-      <Footer/>
-
-    </Container>
-
+                </button>
+                <Card.Footer>
+                  <small className="text-muted">Last updated 3 mins ago</small>
+                </Card.Footer>
+              </div>
+            </div>
+        </div>
+      </div>
+  </Card>
+</CardGroup>
+</Col>
+       ))}
+    </Row>
   );
 }
 
 export default Products;
-*/
